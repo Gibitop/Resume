@@ -11,12 +11,29 @@ const pdfLink = `${t("Document.title")}.pdf`;
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
-        <meta name="description" content={t('Document.description')}>
+        <meta name="description" content={t("Document.description")} />
         <link rel="icon" href="/favicon.ico" />
         <title>{t("Document.title")}</title>
         <style>
+            /* roboto-regular - latin_cyrillic */
+            @font-face {
+                font-family: "Roboto";
+                font-style: normal;
+                font-weight: 400;
+                src: url("../fonts/roboto-v30-latin_cyrillic-regular.woff2")
+                    format("woff2");
+            }
+            /* roboto-500 - latin_cyrillic */
+            @font-face {
+                font-family: "Roboto";
+                font-style: normal;
+                font-weight: 500;
+                src: url("../fonts/roboto-v30-latin_cyrillic-500.woff2")
+                    format("woff2");
+            }
+
             body {
-                font-family: Helvetica, sans-serif;
+                font-family: Roboto, Helvetica, sans-serif;
                 font-size: 0.9rem;
                 line-height: 150%;
             }
@@ -26,6 +43,7 @@ const pdfLink = `${t("Document.title")}.pdf`;
                 aspect-ratio: 0.70711356243;
                 max-width: 210mm;
             }
+
             @media print {
                 @page {
                     size: A4 portrait;
@@ -57,7 +75,9 @@ const pdfLink = `${t("Document.title")}.pdf`;
                 </div>
             </div>
         </main>
-        {/* Workaround to pass a static variable to print-js function (a module) */}
+        {
+            /* Workaround to pass a static variable to print-js function (a module) */
+        }
         <script>
             import printJs from "print-js";
             // @ts-ignore
