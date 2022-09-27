@@ -7,7 +7,9 @@ import astroI18next from "astro-i18next";
 export default defineConfig({
     integrations: [
         tailwind(),
-        compress(),
         astroI18next(),
+        compress({
+            html: false,
+        }),
     ],
 });
