@@ -35,7 +35,7 @@ const generatePDF = async (url, savePath) => {
         if (interceptedRequest.isInterceptResolutionHandled()) return;
 
         const [, path] = interceptedRequest.url().split('file:///');
-        if (path?.startsWith('assets/')) {
+        if (!path.endsWith('.html')) {
             interceptedRequest.respond({
                 body: readFileSync(resolve('dist', path)),
             });
@@ -46,6 +46,7 @@ const generatePDF = async (url, savePath) => {
     })
 
     await page.goto(url);
+    await page.waitForNetworkIdle();
 
     const pdf = await page.pdf({ format: 'A4' });
     await writeFile(savePath, pdf);
