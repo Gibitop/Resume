@@ -9,7 +9,9 @@ import { resolve } from 'path';
 let browser;
 
 const main = async () => {
-    browser = await puppeteer.launch();
+    browser = await puppeteer.launch({
+        args: ['--no-sandbox'],
+    });
 
     await Promise.all([
         generatePDF(
