@@ -5,5 +5,16 @@
             "destination": "https://www.linkedin.com/in/ilya-nikishin-8b504923b/",
             "permanent": true
         }
+    ],
+    "headers": [
+        {
+            "source": "/fonts/(.*)",
+            "headers": [
+                {
+                    "key": "Cache-Control",
+                    "value": "public, max-age=2678400"
+                }
+            ]
+        }
     ]
 }
