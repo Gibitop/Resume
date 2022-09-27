@@ -1,0 +1,9 @@
+{
+    "redirects": [
+        {
+            "source": "/in",
+            "destination": "https://www.linkedin.com/in/ilya-nikishin-8b504923b/",
+            "permanent": true
+        }
+    ]
+}
