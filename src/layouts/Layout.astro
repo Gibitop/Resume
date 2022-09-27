@@ -15,25 +15,26 @@ const pdfLink = `${t("Document.title")}.pdf`;
         <link rel="icon" href="/favicon.ico" />
         <title>{t("Document.title")}</title>
         <style>
-            /* roboto-regular - latin_cyrillic */
             @font-face {
-                font-family: "Roboto";
+                font-family: "Inter";
                 font-style: normal;
                 font-weight: 400;
-                src: url("../fonts/roboto-v30-latin_cyrillic-regular.woff2")
-                    format("woff2");
+                src: local(""),
+                    url("../fonts/inter-v12-latin_cyrillic-regular.woff2")
+                        format("woff2");
             }
-            /* roboto-500 - latin_cyrillic */
+
             @font-face {
-                font-family: "Roboto";
+                font-family: "Inter";
                 font-style: normal;
                 font-weight: 500;
-                src: url("../fonts/roboto-v30-latin_cyrillic-500.woff2")
-                    format("woff2");
+                src: local(""),
+                    url("../fonts/inter-v12-latin_cyrillic-500.woff2")
+                        format("woff2");
             }
 
             body {
-                font-family: Roboto, Helvetica, sans-serif;
+                font-family: Inter, Helvetica, sans-serif;
                 font-size: 0.9rem;
                 line-height: 150%;
             }
