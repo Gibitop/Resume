@@ -1,0 +1,18 @@
+---
+import Button from "./simple/Button.astro";
+
+export interface Props {
+    selectedLang: string;
+}
+
+const { selectedLang } = Astro.props;
+---
+
+<div class="bg-white rounded-full flex p-0.5">
+    <a href="/">
+        <Button variant={selectedLang === "en" ? "dark" : "light"}>En</Button>
+    </a>
+    <a href="/ru">
+        <Button variant={selectedLang === "ru" ? "dark" : "light"}>Ru</Button>
+    </a>
+</div>

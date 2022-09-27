@@ -1,0 +1,19 @@
+---
+import clsx from "clsx";
+export interface Props {
+    href?: string;
+    className?: string
+}
+
+const { href, className } = Astro.props;
+---
+
+<a
+    href={href}
+    class={clsx(
+        "text-sky-600 underline print:no-underline",
+        className,
+    )}
+>
+    <slot />
+</a>

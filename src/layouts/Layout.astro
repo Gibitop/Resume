@@ -1,0 +1,72 @@
+---
+import i18next, { t } from "i18next";
+import LangSwitch from "../components/LangSwitch.astro";
+import Button from "../components/simple/Button.astro";
+
+const pdfLink = `${t("Document.title")}.pdf`;
+---
+
+<!DOCTYPE html>
+<html lang={i18next.language}>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="description" content={t('Document.description')}>
+        <link rel="icon" href="/favicon.ico" />
+        <title>{t("Document.title")}</title>
+        <style>
+            body {
+                font-family: Helvetica, sans-serif;
+                font-size: 0.9rem;
+                line-height: 150%;
+            }
+
+            .a4 {
+                /* Portrait A4 aspect ratio */
+                aspect-ratio: 0.70711356243;
+                max-width: 210mm;
+            }
+            @media print {
+                @page {
+                    size: A4 portrait;
+                    margin: 0%;
+                }
+            }
+        </style>
+    </head>
+    <body class="bg-slate-200 print:bg-none">
+        <main class="min-h-screen grid place-items-center p-4 print:p-0">
+            <div>
+                <div class="flex justify-between mb-4 print:hidden">
+                    <LangSwitch selectedLang={i18next.language} />
+                    <div class="flex gap-3">
+                        <Button onclick="printResume()">
+                            {t("Actions.print")}
+                        </Button>
+                        <a download href={pdfLink} class="contents">
+                            <Button>
+                                {t("Actions.downloadPDF")}
+                            </Button>
+                        </a>
+                    </div>
+                </div>
+                <div
+                    class="a4 px-5 sm:px-10 print:px-10 py-7 bg-white rounded-xl print:rounded-none shadow-xl print:shadow-none"
+                >
+                    <slot />
+                </div>
+            </div>
+        </main>
+        <!-- Workaround to pass a static variable to print-js function (a module) -->
+        <script>
+            import printJs from "print-js";
+            // @ts-ignore
+            window.printJs = printJs;
+        </script>
+        <script define:vars={{ pdfLink }}>
+            function printResume() {
+                printJs(pdfLink);
+            }
+        </script>
+    </body>
+</html>

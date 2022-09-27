@@ -1,0 +1,46 @@
+{
+    "Document": {
+        "title": "Resume Ilya Nikishin",
+        "description": "Resume Ilya Nikishin - Senior Frontend Developer"
+    },
+    "Actions": {
+        "downloadPDF": "Download PDF",
+        "print": "Print"
+    },
+    "Resume": {
+        "title": "Ilya Nikishin",
+        "Role": {
+            "current": "Position: Senior Frontend Developer",
+            "goal": "Goal:"
+        },
+        "WorkExperience": {
+            "title": "Work experience",
+            "Sber": {
+                "title": "Sber",
+                "role": "Frontend developer",
+                "duration": "1 year 6 months",
+                "description": "Leaded product frontend development.\nTaught and mentored new developers.\nWas a team's scrum-master and held agile meetings.\nHelped plan sprints and balance load on the team.\nOrganized and presented on inner meetups and events of Sber frontend community."
+            },
+            "NTC": {
+                "title": "Scientific Technical Center «Industrial Safety»",
+                "role": "Full-stack developer",
+                "duration": "10 months",
+                "description": "Maintained company websites and services, as well as developed new ones.\nModernised the tech stack and solved performance issues for slower apps.\nSet up and maintained company's web-servers.\nDeveloped an employee request service completed with Active Directory integration."
+            },
+            "RGA": {
+                "title": "Russian go-club association",
+                "role": "Full-stack developer",
+                "duration": "1 year",
+                "description": "Developed web and mobile apps for projects \"Russian go-club association\" and \"Starykh gallery\".\nSet up and maintained server and sass services.\nCreated a custom CI/CD tool specifically for the team's requirements.\nRewrote auth system fixing a critical vulnerability.\nDeveloped an interactive art gallery in VR."
+            }
+        },
+        "Skills": {
+            "title": "Skills",
+            "languages": "English — C1 | Russian — C2"
+        },
+        "About": {
+            "title": "About myself",
+            "content": "I started as a backend developer, then moved to full-stack, and later focused on frontend development.\nWhile working, I understood that I'm good at managing tasks in a team and teaching people about software development.\nIn development, I'm interested in new ways to develop and architect web apps.\nCurrently, learning Astro and Solid.js frameworks as well as tRPC library."
+        }
+    }
+}

@@ -1,0 +1,96 @@
+---
+import { t } from "i18next";
+import EmailIcon from "./icons/EmailIcon.astro";
+import LinkedInIcon from "./icons/LinkedInIcon.astro";
+import TelegramIcon from "./icons/TelegramIcon.astro";
+import PlaceOfWork from "./PlaceOfWork.astro";
+import Section from "./Section.astro";
+import Link from "./simple/Link.astro";
+---
+
+<h1 class="text-center text-3xl font-semibold mb-5">
+    {t("Resume.title")}
+</h1>
+
+<ul class="flex justify-around gap-3 flex-col sm:flex-row print:flex-row list-none border-y border-neutral-300 p-2 mb-5">
+    <li class="flex-1">
+        <Link
+            href="https://www.linkedin.com/in/ilya-nikishin-8b504923b"
+            className="text-lg flex sm:justify-center print:justify-center items-center gap-2"
+        >
+            <LinkedInIcon />
+            <span class="print:hidden">Ilya Nikishin</span>
+            <span class="hidden print:inline">nikishin.dev/in</span>
+        </Link>
+    </li>
+    <li class="flex-1">
+        <Link
+            href="mailto:ilya.ruwork@gmail.com"
+            className="text-lg flex sm:justify-center print:justify-center items-center gap-2"
+        >
+            <EmailIcon />
+            ilya.ruwork@gmail.com
+        </Link>
+    </li>
+    <li class="flex-1">
+        <Link
+            href="https://t.me/Gibitop"
+            className="text-lg flex sm:justify-center print:justify-center items-center gap-2"
+        >
+            <TelegramIcon />
+            Gibitop
+        </Link>
+    </li>
+</ul>
+
+<section class="mb-3">
+    <h2 id="role-field" class="text-2xl font-semibold mb-3">
+        {t("Resume.Role.current")}
+    </h2>
+</section>
+
+<Section name={t("Resume.WorkExperience.title")}>
+    <PlaceOfWork
+        name={t("Resume.WorkExperience.Sber.title")}
+        duration={t("Resume.WorkExperience.Sber.duration")}
+        role={t("Resume.WorkExperience.Sber.role")}
+        description={t("Resume.WorkExperience.Sber.description")}
+    />
+    <hr class="my-4" />
+    <PlaceOfWork
+        name={t("Resume.WorkExperience.NTC.title")}
+        duration={t("Resume.WorkExperience.NTC.duration")}
+        role={t("Resume.WorkExperience.NTC.role")}
+        description={t("Resume.WorkExperience.NTC.description")}
+    />
+    <hr class="my-4" />
+    <PlaceOfWork
+        name={t("Resume.WorkExperience.RGA.title")}
+        duration={t("Resume.WorkExperience.RGA.duration")}
+        role={t("Resume.WorkExperience.RGA.role")}
+        description={t("Resume.WorkExperience.RGA.description")}
+    />
+</Section>
+
+<Section name={t("Resume.Skills.title")}>
+    <div class="flex flex-col sm:flex-row print:flex-row">
+        <ul class="flex-1 list-disc list-inside">
+            <li>React | Next.js</li>
+            <li>React Query</li>
+            <li>React Hook Form</li>
+            <li>Mobx | Effector</li>
+            <li>Sass + Tailwind</li>
+        </ul>
+        <ul class="flex-1 list-disc list-inside">
+            <li>Webpack | Vite</li>
+            <li>Node.js + Typescript</li>
+            <li>MySQL | MongoDB</li>
+            <li>Docker + NGINX</li>
+            <li>{t("Resume.Skills.languages")}</li>
+        </ul>
+    </div>
+</Section>
+
+<Section name={t("Resume.About.title")}>
+    <p class="whitespace-pre-line">{t("Resume.About.content")}</p>
+</Section>
