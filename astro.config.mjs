@@ -8,8 +8,6 @@ export default defineConfig({
     integrations: [
         tailwind(),
         astroI18next(),
-        compress({
-            html: false,
-        }),
+        compress({ html: false }),
     ],
 });

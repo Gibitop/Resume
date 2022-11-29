@@ -1,7 +1,7 @@
 import type { AstroI18nextConfig } from 'astro-i18next'
 
 const config: AstroI18nextConfig = {
-    defaultLanguage: "ru",
+    defaultLanguage: "en",
     supportedLanguages: ["en", "ru"],
     i18next: {
         initImmediate: false,

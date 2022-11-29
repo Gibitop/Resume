@@ -1,5 +1,6 @@
 ---
 import i18next, { t } from "i18next";
+import DownloadIcon from "../components/icons/DownloadIcon.astro";
 import LangSwitch from "../components/LangSwitch.astro";
 import Button from "../components/simple/Button.astro";
 
@@ -13,7 +14,6 @@ const pdfLink = `${t("Document.title")}.pdf`;
         <meta name="viewport" content="width=device-width" />
         <meta name="description" content={t("Document.description")} />
         <link rel="icon" href="/favicon.ico" />
-        <title>{t("Document.title")}</title>
         <style>
             @font-face {
                 font-family: "Inter";
@@ -51,6 +51,7 @@ const pdfLink = `${t("Document.title")}.pdf`;
                 }
             }
         </style>
+        <title>{t("Document.title")}</title>
     </head>
     <body class="bg-slate-200 print:bg-none">
         <main class="min-h-screen grid place-items-center p-4 print:p-0">
@@ -58,11 +59,9 @@ const pdfLink = `${t("Document.title")}.pdf`;
                 <div class="flex justify-between mb-4 print:hidden">
                     <LangSwitch selectedLang={i18next.language} />
                     <div class="flex gap-3">
-                        <Button onclick="printResume()">
-                            {t("Actions.print")}
-                        </Button>
                         <a download href={pdfLink} class="contents">
-                            <Button>
+                            <Button classNames="flex gap-2 items-center">
+                                <DownloadIcon />
                                 {t("Actions.downloadPDF")}
                             </Button>
                         </a>
@@ -75,18 +74,5 @@ const pdfLink = `${t("Document.title")}.pdf`;
                 </div>
             </div>
         </main>
-        {
-            /* Workaround to pass a static variable to print-js function (a module) */
-        }
-        <script>
-            import printJs from "print-js";
-            // @ts-ignore
-            window.printJs = printJs;
-        </script>
-        <script define:vars={{ pdfLink }}>
-            function printResume() {
-                printJs(pdfLink);
-            }
-        </script>
     </body>
 </html>

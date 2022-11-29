@@ -10,37 +10,36 @@
     "Resume": {
         "title": "Ilya Nikishin",
         "Role": {
-            "current": "Position: Senior Frontend Developer",
-            "goal": "Goal:"
+            "current": "Position: Senior Frontend Developer"
         },
         "WorkExperience": {
             "title": "Work experience",
             "Sber": {
-                "title": "Sber",
+                "title": "Sberbank",
                 "role": "Frontend developer",
                 "duration": "1 year 6 months",
-                "description": "Leaded product frontend development.\nTaught and mentored new developers.\nWas a team's scrum-master and held agile meetings.\nHelped plan sprints and balance load on the team.\nOrganized and presented on inner meetups and events of Sber frontend community."
+                "description": "Developed the SberBusiness project with over a million users.\nLeaded frontend development in my team, taught and mentored new developers.\nWas a Scrum Master and helped to distribute the load on the team.\nOrganized and spoke at internal events for the frontend community.\nMigrated the project to Webpack 5 and Module Federation, and optimized building and linting, which resulted in a 3x speedup on a cold build and a 2x speedup on a rebuild."
             },
             "NTC": {
                 "title": "Scientific Technical Center «Industrial Safety»",
                 "role": "Full-stack developer",
                 "duration": "10 months",
-                "description": "Maintained company websites and services, as well as developed new ones.\nModernised the tech stack and solved performance issues for slower apps.\nSet up and maintained company's web-servers.\nDeveloped an employee request service completed with Active Directory integration."
+                "description": "Maintained the company's existing services and websites, as well as created new ones.\nDeveloped an internal requests service for employees.\nAdded integration with Active Directory.\nModernized the technical stack and addressed performance issues with slow running apps.\nSet up and maintained company web servers."
             },
             "RGA": {
                 "title": "Russian go-club association",
                 "role": "Full-stack developer",
                 "duration": "1 year",
-                "description": "Developed web and mobile apps for projects \"Russian go-club association\" and \"Starykh gallery\".\nSet up and maintained server and sass services.\nCreated a custom CI/CD tool specifically for the team's requirements.\nRewrote auth system fixing a critical vulnerability.\nDeveloped an interactive art gallery in VR."
+                "description": "Developed web and mobile systems for the projects «Russian Go-club Association» and «Starykh Gallery».\nDeveloped a custom CI/CD tool to manage app builds and releases. \nRedesigned the authorization system, eliminating a critical vulnerability.\nSet up and maintain the company's server and SaaS services.\nDeveloped an interactive art gallery in virtual reality."
             }
         },
         "Skills": {
             "title": "Skills",
-            "languages": "English — C1 | Russian — C2"
+            "english": "English – C1"
         },
         "About": {
             "title": "About myself",
-            "content": "I started as a backend developer, then moved to full-stack, and later focused on frontend development.\nWhile working, I understood that I'm good at managing tasks in a team and teaching people about software development.\nIn development, I'm interested in new ways to develop and architect web apps.\nCurrently, learning Astro and Solid.js frameworks as well as tRPC library."
+            "content": "I started as a backend developer, moved to full-stack, and later focused on frontend development. While working, I realized that I am good at organizing tasks in a team, as well as teaching people development. In development, I'm interested in new approaches to web application architecture. I am currently learning new generation frameworks like Astro and Solid.js."
         }
     }
 }
