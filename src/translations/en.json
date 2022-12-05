@@ -4,13 +4,12 @@
         "description": "Resume Ilya Nikishin - Senior Frontend Developer"
     },
     "Actions": {
-        "downloadPDF": "Download PDF",
-        "print": "Print"
+        "downloadPDF": "Download PDF"
     },
     "Resume": {
         "title": "Ilya Nikishin",
         "Role": {
-            "current": "Position: Senior Frontend Developer"
+            "current": "Goal: Senior Frontend Developer"
         },
         "WorkExperience": {
             "title": "Work experience",
@@ -18,19 +17,19 @@
                 "title": "Sberbank",
                 "role": "Frontend developer",
                 "duration": "1 year 6 months",
-                "description": "Developed the SberBusiness project with over a million users.\nLeaded frontend development in my team, taught and mentored new developers.\nWas a Scrum Master and helped to distribute the load on the team.\nOrganized and spoke at internal events for the frontend community.\nMigrated the project to Webpack 5 and Module Federation, and optimized building and linting, which resulted in a 3x speedup on a cold build and a 2x speedup on a rebuild."
+                "description": "Developed the SberBusiness project, which has over a million users.\nLed frontend development for my team, teaching and mentoring new developers.\nActed as Scrum Master, distributing workload and ensuring team efficiency.\nOrganized and spoke at internal events for the frontend community.\nMigrated the project to Webpack 5 and Module Federation, resulting in a 3x speedup on a cold build\n and a 2x speedup on a rebuild."
             },
             "NTC": {
                 "title": "Scientific Technical Center «Industrial Safety»",
                 "role": "Full-stack developer",
                 "duration": "10 months",
-                "description": "Maintained the company's existing services and websites, as well as created new ones.\nDeveloped an internal requests service for employees.\nAdded integration with Active Directory.\nModernized the technical stack and addressed performance issues with slow running apps.\nSet up and maintained company web servers."
+                "description": "Maintained and developed new services and websites for the company.\nCreated an internal requests service for employees, including integration with Active Directory.\nModernized the technical stack and addressed performance issues with slow-running apps.\nSet up and maintained company web servers and virtual machines."
             },
             "RGA": {
                 "title": "Russian go-club association",
                 "role": "Full-stack developer",
                 "duration": "1 year",
-                "description": "Developed web and mobile systems for the projects «Russian Go-club Association» and «Starykh Gallery».\nDeveloped a custom CI/CD tool to manage app builds and releases. \nRedesigned the authorization system, eliminating a critical vulnerability.\nSet up and maintain the company's server and SaaS services.\nDeveloped an interactive art gallery in virtual reality."
+                "description": "Developed web and mobile systems for the «Russian Go-Club Association» and «Starykh Gallery» projects.\nBuilt a custom CI/CD tool to manage app builds and releases.\nRedesigned the authorization system, eliminating a critical vulnerability.\nSet up and maintained company server and SaaS services.\nDeveloped an interactive art gallery in virtual reality."
             }
         },
         "Skills": {
@@ -39,7 +38,7 @@
         },
         "About": {
             "title": "About myself",
-            "content": "I started as a backend developer, moved to full-stack, and later focused on frontend development. While working, I realized that I am good at organizing tasks in a team, as well as teaching people development. In development, I'm interested in new approaches to web application architecture. I am currently learning new generation frameworks like Astro and Solid.js."
+            "content": "I am a senior frontend developer with over 3 years of experience in the field. I have a strong background in web application architecture and a passion for teaching and mentoring others. I am currently exploring new generation frameworks such as Astro and Solid.js to continue improving my skills. In my free time, I enjoy exploring AI tools and making VFX."
         }
     }
 }
